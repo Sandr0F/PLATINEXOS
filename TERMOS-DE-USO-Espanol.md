@@ -10,6 +10,22 @@ Las contribuciones económicas al desarrollador son totalmente voluntarias. Ning
 
 PLATINEXOS es un proyecto independiente, sin afiliación, patrocinio ni aprobación de **Valve Corporation**. Steam es una marca de Valve Corporation. Las demás marcas, los nombres de juegos y los servicios pertenecen a sus respectivos titulares.
 
+### 1.1. Licencia de uso de PLATINEXOS
+
+PLATINEXOS es una aplicación gratuita, desarrollada y puesta a disposición por Sandr0F. Los derechos sobre los elementos originales de la aplicación pertenecen a sus respectivos titulares, preservando los derechos de autor de Sandr0F y los derechos de terceros.
+
+Mediante la aceptación de estos Términos, Sandr0F concede al usuario una licencia gratuita, personal, no exclusiva y no sublicenciable para descargar, extraer, instalar y ejecutar PLATINEXOS en computadoras compatibles bajo su control, para fines personales y no comerciales.
+
+La licencia también permite conservar copias de seguridad para uso personal, respetando los derechos previstos en la legislación aplicable.
+
+La distribución gratuita de la aplicación no transfiere derechos de autor, no concede acceso al código fuente propietario ni autoriza, sin permiso del titular de los derechos, la comercialización, el sublicenciamiento, la modificación o la redistribución de versiones alteradas de PLATINEXOS.
+
+El uso de la aplicación no autoriza a eliminar ni presentar de forma engañosa sus avisos de derechos de autor, marcas y declaraciones de independencia respecto de Valve Corporation.
+
+Las restricciones de esta sección no impiden los actos expresamente permitidos por la legislación aplicable, incluidas las excepciones legales relativas a los programas de computadora.
+
+Esta licencia se aplica exclusivamente a los elementos de PLATINEXOS sobre los que Sandr0F tiene derechos para concederla. Los componentes Microsoft y los demás componentes de terceros siguen sujetos a sus propias licencias, cuyos derechos y permisos no son modificados por estos Términos.
+
 ## 2. Integración con Steam
 
 Para configurar la sincronización con Steam, ingresa tu SteamID64 o la URL de tu perfil de Steam, junto con una clave personal válida de la Steam Web API, en la sección Configuración de PLATINEXOS.
@@ -29,6 +45,18 @@ Mantén en secreto tu clave de la Steam Web API y no la compartas con terceros.
 PLATINEXOS no solicita la contraseña de tu cuenta Steam ni códigos de autenticación de Steam Guard.
 
 Guardar la clave de forma persistente en el Administrador de credenciales de Windows es opcional.
+
+**Registro y responsabilidad por la clave de la Steam Web API**
+
+La clave de la Steam Web API es registrada por el propio usuario en el servicio oficial de Valve Corporation, mediante la aceptación de los Términos de la Steam Web API. Ese registro establece una relación contractual directa entre el usuario y Valve, independiente de los Términos de Uso de PLATINEXOS.
+
+El titular de la clave es responsable de la información proporcionada durante el registro, incluido el dominio asociado cuando se solicite, de la confidencialidad de la credencial y de las solicitudes realizadas con ella.
+
+El uso de `localhost` como dominio registrado o de una aplicación de escritorio independiente no constituye, por sí solo, prueba de aprobación o autorización específica de Valve para PLATINEXOS. El proyecto no tiene afiliación ni aprobación oficial conocida de Valve Corporation.
+
+Valve podrá modificar, restringir, suspender o finalizar el acceso a la Steam Web API conforme a sus propios términos y condiciones.
+
+PLATINEXOS no solicita la contraseña de Steam, no proporciona claves personales de terceros ni sustituye las obligaciones contractuales asumidas por el usuario frente a Valve.
 
 ### 2.2. Sincronización al iniciar
 
@@ -84,7 +112,7 @@ Para solicitudes de privacidad, escribe a **platinexos@gmail.com**.
 
 ## 6. Soporte y comunicación
 
-Cuando el repositorio público esté disponible y tenga habilitada la función Issues, puedes reportar problemas técnicos o sugerir mejoras en [GitHub Issues de PLATINEXOS](https://github.com/Sandr0F/PLATINEXOS/issues).
+Para dudas técnicas, reportes de problemas y sugerencias, utiliza [GitHub Issues de PLATINEXOS](https://github.com/Sandr0F/PLATINEXOS/issues).
 
 La información que publiques en ese canal es pública.
 

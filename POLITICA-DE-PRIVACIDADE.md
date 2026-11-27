@@ -1,6 +1,6 @@
 # Política de Privacidade do PLATINEXOS 1.0.0
 
-Última atualização: 23 de novembro de 2026. Versão 1.0.0.
+Última atualização: 24 de novembro de 2026. Versão 1.0.0.
 
 ## Aplicativo e finalidade
 
@@ -48,6 +48,6 @@ Essas instruções referem-se ao armazenamento conhecido da versão 1.0.0 e não
 
 ## Contato e suporte
 
-Para dúvidas técnicas gerais, utilize o [GitHub Issues do repositório público do PLATINEXOS](https://github.com/Sandr0F/PLATINEXOS/issues), quando esse repositório estiver disponível. **Esse canal é público: não publique chaves, bancos locais, identificadores pessoais, relatórios não revisados ou capturas sensíveis.**
+Para dúvidas técnicas, relatos de problemas e sugestões, utilize o GitHub Issues do PLATINEXOS: [https://github.com/Sandr0F/PLATINEXOS/issues](https://github.com/Sandr0F/PLATINEXOS/issues). Esse canal é público. Não compartilhe chaves de acesso, senhas, bancos de dados locais, informações pessoais, relatórios não revisados ou capturas de tela que contenham dados sensíveis. Para assuntos privados ou relacionados à privacidade, entre em contato pelo e-mail [platinexos@gmail.com](mailto:platinexos@gmail.com).
 
 **Contato privado para privacidade:** [platinexos@gmail.com](mailto:platinexos@gmail.com). Utilize esse endereço para solicitações que envolvam dados pessoais; não encaminhe esses dados ao GitHub Issues público.

@@ -10,6 +10,22 @@ Financial contributions to the developer are entirely voluntary. No feature requ
 
 PLATINEXOS is an independent project and is not affiliated with, sponsored by, or endorsed by **Valve Corporation**. Steam is a trademark of Valve Corporation. Other trademarks, game names, and services belong to their respective owners.
 
+### 1.1. License to use PLATINEXOS
+
+PLATINEXOS is a free application developed and made available by Sandr0F. Rights in the application's original elements belong to their respective holders, preserving Sandr0F's copyright and third-party rights.
+
+Upon acceptance of these Terms, Sandr0F grants the user a free-of-charge, personal, non-exclusive and non-sublicensable license to download, extract, install and run PLATINEXOS on compatible computers under their control, for personal and non-commercial purposes.
+
+The license also permits keeping backup copies for personal use, subject to the rights provided by applicable law.
+
+Providing the application free of charge does not transfer copyright, grant access to the proprietary source code, or authorize, without the rights holder's permission, commercialization, sublicensing, modification or redistribution of modified versions of PLATINEXOS.
+
+Use of the application does not authorize removing or misleadingly presenting its copyright notices, trademarks or statements of independence from Valve Corporation.
+
+The restrictions in this section do not prevent acts expressly permitted by applicable law, including statutory exceptions relating to computer programs.
+
+This license applies exclusively to PLATINEXOS elements over which Sandr0F has the rights necessary to grant it. Microsoft components and other third-party components remain subject to their own licenses, whose rights and permissions are not modified by these Terms.
+
 ## 2. Steam integration
 
 To set up Steam synchronization, enter your SteamID64 or Steam profile URL, along with a valid personal Steam Web API key, in PLATINEXOS Settings.
@@ -29,6 +45,18 @@ Keep your Steam Web API key confidential and do not share it with third parties.
 PLATINEXOS does not ask for your Steam password or Steam Guard authentication codes.
 
 Saving the key in Windows Credential Manager is optional.
+
+**Registration and responsibility for the Steam Web API key**
+
+The Steam Web API key is registered by the user through Valve Corporation's official service, upon acceptance of the Steam Web API Terms of Use. This registration establishes a direct contractual relationship between the user and Valve, independent of the PLATINEXOS Terms of Use.
+
+The key holder is responsible for the information provided during registration, including the associated domain when requested, for keeping the credential confidential and for requests made with it.
+
+Using `localhost` as the registered domain or using an independent desktop application does not, by itself, establish Valve's approval or specific authorization for PLATINEXOS. The project has no affiliation with or known official approval from Valve Corporation.
+
+Valve may modify, restrict, suspend or terminate access to the Steam Web API under its own terms and conditions.
+
+PLATINEXOS does not ask for the Steam password, does not provide other people's personal keys and does not replace the contractual obligations the user has undertaken toward Valve.
 
 ### 2.2. Synchronization at startup
 
@@ -84,7 +112,7 @@ For privacy requests, contact **platinexos@gmail.com**.
 
 ## 6. Support and communication
 
-When the public repository is available and Issues is enabled, you can report issues or suggest improvements through [PLATINEXOS GitHub Issues](https://github.com/Sandr0F/PLATINEXOS/issues).
+For technical questions, problem reports and suggestions, use [PLATINEXOS GitHub Issues](https://github.com/Sandr0F/PLATINEXOS/issues).
 
 Information posted there is public.
 

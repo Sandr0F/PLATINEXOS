@@ -1,68 +1,98 @@
 # PLATINEXOS
 
-O **PLATINEXOS** é um aplicativo gratuito e independente para **Windows 11 x64**. Acompanhe sua biblioteca Steam e o progresso nas conquistas, consulte indicadores e estatísticas e organize favoritos e objetivos pessoais. A interface está disponível em português brasileiro, inglês americano e espanhol latino-americano.
+[English](README.md) | [Português (Brasil)](README-pt-BR.md) | [Español (Latinoamérica)](README-Espanol.md)
 
-O aplicativo não desbloqueia conquistas na Steam, não modifica jogos e não altera arquivos de salvamento. Não há afiliação, patrocínio ou aprovação da Valve Corporation. Steam é marca da Valve Corporation.
+[Release notes](Release/RELEASE-en-US.md) · [Security](RELATORIO-DE-SEGURANCA-en-US.md) · [Steam Web API Key](Guia-Steam-Web-API-Key/GUIA-en-US.md) · [Real application screenshots](IMAGENS-en-US.md)
 
-## Download oficial e requisitos
 
-O Portable será disponibilizado em ZIP nas [Releases oficiais do PLATINEXOS](https://github.com/Sandr0F/PLATINEXOS/releases). O download estará disponível quando a primeira Release for publicada.
+**PLATINEXOS** is a free, independent application for **Windows 11 x64**. Track your Steam library and achievement progress, view indicators and statistics, and organize favorites and personal goals. The interface is available in Brazilian Portuguese, American English and Latin American Spanish.
+
+The application does not unlock achievements on Steam, modify games or change save files. It is not affiliated with, sponsored by or endorsed by Valve Corporation. Steam is a trademark of Valve Corporation.
+
+PLATINEXOS is provided under a free-of-charge license for personal and non-commercial use, with closed proprietary source code, as set out in the [Terms of Use](TERMOS-DE-USO-English.md). Third-party components retain their own licenses.
+
+## Official download and requirements
+
+Download the Portable ZIP from the [official PLATINEXOS Releases](https://github.com/Sandr0F/PLATINEXOS/releases).
 
 - Windows 11 x64.
-- Internet para sincronização e obtenção de conteúdo remoto; dados já carregados podem ser consultados localmente conforme as limitações do aplicativo.
-- SteamID64 ou URL de perfil e uma chave Steam Web API válida para configurar a sincronização.
+- Internet access for synchronization and remote content; previously loaded data can be viewed locally subject to the application's limitations.
+- A SteamID64 or profile URL and a valid Steam Web API key to configure synchronization.
 
-O pacote inclui .NET e Windows App SDK e pode ser aberto sem o cliente Steam instalado. A identificação opcional de jogos instalados utiliza arquivos locais da biblioteca Steam. A disponibilidade dos dados depende dos serviços da Valve e da privacidade do perfil consultado.
+The package includes .NET and the Windows App SDK through self-contained deployment. The Steam client does not need to remain open to query the Web API. Running the application without the Steam client installed was previously verified in a Windows 10 environment; version 1.0.0 was validated on Windows 11 x64. Optional installed-game detection depends on local Steam files. These results do not guarantee operation on every Windows installation or eliminate potential native-component requirements. Minimum CPU, memory, and free-space specifications have not been established without measurement.
 
-## Extrair, verificar e executar
+## Extract, verify and run
 
-1. Consulte os [Termos de Uso](TERMOS-DE-USO.md), a [Política de Privacidade](POLITICA-DE-PRIVACIDADE.md) e as [licenças de terceiros](LICENCAS-DE-TERCEIROS.md).
-2. Quando disponíveis, baixe o ZIP e o arquivo `.sha256` da mesma Release oficial.
-3. No PowerShell, na pasta do download, execute o comando abaixo, substituindo o nome pelo arquivo baixado, e compare o resultado com o `.sha256`:
+1. Read the [Terms of Use](TERMOS-DE-USO-English.md), [Privacy Policy](POLITICA-DE-PRIVACIDADE-English.md) and [third-party licenses](LICENCAS-DE-TERCEIROS.md).
+2. Download the ZIP and `.sha256` file from the same official Release.
+3. In PowerShell, from your download folder, run the command below, replacing the filename with the downloaded ZIP, and compare the result with the `.sha256` file:
 
    ```powershell
-   Get-FileHash -Algorithm SHA256 -LiteralPath '.\nome-do-arquivo.zip'
+   Get-FileHash -Algorithm SHA256 -LiteralPath '.\filename.zip'
    ```
 
-4. Extraia **todo o conteúdo** para uma pasta do seu usuário. Não execute dentro do ZIP nem copie somente o EXE.
-5. Abra `Platinexos.exe` sem privilégios de administrador, consulte os documentos e decida se aceita os termos apresentados.
+4. Extract **all contents** to a folder in your user account. Do not run from inside the ZIP or copy only the EXE.
+5. Open `Platinexos.exe` without administrator privileges, read the documents and decide whether to accept the terms presented.
 
-O executável 1.0.0 está sem assinatura digital. O Windows poderá apresentar avisos: confira a procedência do arquivo e não desative as proteções do sistema. O SHA-256 confere integridade, mas não comprova a identidade do editor.
+The 1.0.0 executable is not digitally signed. Windows may display warnings: check the file's origin and do not disable system protections. SHA-256 verifies integrity but does not establish the publisher's identity.
 
-## Configurar a Steam Web API
+## Configure the Steam Web API
 
-Em **Configurações**, informe o SteamID64 ou a URL do perfil e a chave pessoal válida da Steam Web API. Obtenha a chave legitimamente na sua própria conta pela [página oficial da Valve](https://steamcommunity.com/dev/apikey). Consulte suas próprias contas ou perfis de terceiros cujos titulares tenham solicitado ou autorizado a consulta. O aplicativo não concede acesso a informações privadas.
+In **Settings**, enter the SteamID64 or profile URL and your valid personal Steam Web API key. Obtain the key legitimately through your own account on [Valve's official page](https://steamcommunity.com/dev/apikey). Query your own accounts or third-party profiles whose holders have requested or authorized the query. The application does not grant access to private information.
 
-- Informe a chave somente no campo próprio do PLATINEXOS. O aplicativo não solicita senha Steam nem códigos Steam Guard.
-- O salvamento no **Gerenciador de Credenciais do Windows** é opcional. A chave não fica no SQLite, cache ou preferências.
-- **Salvar a chave não autoriza a sincronização automática.** Para sincronizar ao abrir, ative a autorização específica para a conta Steam desejada. A opção começa desmarcada, inclusive para contas que já tenham chave salva, e requer uma chave salva disponível.
-- Você pode revogar essa autorização em Configurações sem apagar a chave. A sincronização manual continua disponível.
-- Não compartilhe chaves em Issues, relatórios ou capturas. Se houver comprometimento, revogue a chave no serviço oficial da Valve, cadastre outra e substitua a antiga no aplicativo. Removê-la do aplicativo não a revoga na Valve.
+- Enter the key only in PLATINEXOS's dedicated field. The application does not ask for a Steam password or Steam Guard codes.
+- Saving it in **Windows Credential Manager** is optional. The key is not stored in SQLite, the cache or preferences.
+- **Saving the key does not authorize automatic synchronization.** To sync at startup, enable the separate authorization for the desired Steam account. The option starts unchecked, including for accounts that already have a saved key, and requires a saved key to be available.
+- You can revoke this authorization in Settings without deleting the key. Manual synchronization remains available.
+- Do not share keys in Issues, reports or screenshots. If compromised, revoke the key through Valve's official service, register another and replace the old key in the application. Removing it from the application does not revoke it at Valve.
 
-Os dados são armazenados por perfil Windows. Extrair o Portable em outra pasta não cria um perfil de dados isolado. Consulte a Política para entender o armazenamento, os serviços externos e a remoção separada de dados e credenciais.
+The user must obtain the key directly from Valve and accept the service's terms. The user is responsible for registration, the associated domain when requested, use of the key and its confidentiality. PLATINEXOS has no known official approval from Valve; using `localhost` does not establish such approval. Valve may modify, restrict, suspend or terminate access to the Steam Web API under its terms.
 
-## Atualizações da modalidade Portable
+Data is stored per Windows user profile. Extracting the Portable to another folder does not create an isolated data profile. Read the Policy to understand storage, external services and the separate removal of data and credentials.
 
-As atualizações são baixadas manualmente pelos canais oficiais. Não há instalação automática de atualizações nesta modalidade.
+## Portable edition updates
 
-## Documentos por idioma
+Updates are downloaded manually through official channels. This edition does not install updates automatically.
 
-| Idioma | Termos de Uso | Política de Privacidade |
+## Documents by language
+
+| Language | Terms of Use | Privacy Policy |
 |---|---|---|
-| Português brasileiro | [Termos de Uso](TERMOS-DE-USO.md) | [Política de Privacidade](POLITICA-DE-PRIVACIDADE.md) |
+| Brazilian Portuguese | [Termos de Uso](TERMOS-DE-USO.md) | [Política de Privacidade](POLITICA-DE-PRIVACIDADE.md) |
 | English (United States) | [Terms of Use](TERMOS-DE-USO-English.md) | [Privacy Policy](POLITICA-DE-PRIVACIDADE-English.md) |
-| Español latinoamericano | [Términos de Uso](TERMOS-DE-USO-Espanol.md) | [Política de Privacidad](POLITICA-DE-PRIVACIDADE-Espanol.md) |
+| Latin American Spanish | [Términos de Uso](TERMOS-DE-USO-Espanol.md) | [Política de Privacidad](POLITICA-DE-PRIVACIDADE-Espanol.md) |
 
-- [Avisos de Direitos Autorais](AVISOS-DE-DIREITOS-AUTORAIS.md).
-- [Índice de licenças de terceiros](LICENCAS-DE-TERCEIROS.md).
-- [Relação dos arquivos originais de licença](LICENSE-FILES.txt).
+- [Copyright Notices](AVISOS-DE-DIREITOS-AUTORAIS.md).
+- [Third-party license index](LICENCAS-DE-TERCEIROS.md).
+- [List of original license files](LICENSE-FILES.txt).
 
-Os Termos, as Políticas, o índice e os textos originais de licenças deste repositório são cópias integrais dos documentos que acompanham o Portable aprovado. Os arquivos HTML e RTF das licenças são preservados em seus formatos originais e podem ser baixados para leitura. Caminhos `Legal/...` mencionados nos textos referem-se à organização dentro do ZIP; nesta página, os documentos e a pasta `Licencas/` ficam na raiz do repositório documental.
+The Terms, Policies, index and original license texts in this repository are complete copies of the documents accompanying the approved Portable. HTML and RTF license files retain their original formats and can be downloaded for reading. Paths beginning with `Legal/...` in those texts refer to the ZIP layout; on this page, the documents and `Licencas/` folder are at the documentation repository's root.
 
-## Suporte e contato
+## Support and contact
 
-Use o [GitHub Issues do PLATINEXOS](https://github.com/Sandr0F/PLATINEXOS/issues) para relatar problemas e sugerir melhorias. O canal é público: não publique senhas, chaves Steam, bancos pessoais, caches ou outras informações sensíveis.
+Use [PLATINEXOS GitHub Issues](https://github.com/Sandr0F/PLATINEXOS/issues) to report problems and suggest improvements. This channel is public: do not post passwords, Steam keys, personal databases, caches or other sensitive information.
 
-Para comunicações privadas ou relacionadas à privacidade: [platinexos@gmail.com](mailto:platinexos@gmail.com).
+For private communications or privacy matters: [platinexos@gmail.com](mailto:platinexos@gmail.com).
 
-Eventuais contribuições financeiras são inteiramente voluntárias e destinadas ao desenvolvimento independente. Nenhuma funcionalidade depende de pagamento.
+Financial contributions are entirely voluntary and support independent development. No feature requires payment.
+
+## Security and reliability
+
+The PLATINEXOS 1.0.0 package recorded **0/60 antivirus detections on VirusTotal** in the November 25, 2026 reanalysis, a **Clean classification on Kaspersky OpenTIP**, and **0/21 antivirus detections on OPSWAT MetaDefender**, with an overall result of **No Threats Detected**.
+
+[View VirusTotal analysis](https://www.virustotal.com/gui/file/eb3a4f50d6a796b35ef0678bbebbdb01c3bacc683ffaf57ab7a10bd4d122cecf/detection). Direct report link confirmed by the developer in an incognito window. No new upload is needed. Earlier candidate names refer to the same SHA-256.
+
+```text
+EB3A4F50D6A796B35EF0678BBEBBDB01C3BACC683FFAF57AB7A10BD4D122CECF
+```
+
+These are selected checks. The [Detailed security report](RELATORIO-DE-SEGURANCA-en-US.md) distinguishes antivirus results from behavioral indicators, records the investigated Sigma alert and identifies additional MetaDefender modules that did not complete their checks. The SHA-256 and official files are available through [PLATINEXOS Releases](https://github.com/Sandr0F/PLATINEXOS/releases).
+
+
+## Real application screenshots
+
+![Steam library overview and progress statistics](Imagens-Release-v3/01-App-Showcase/01-overview-en.png)
+
+[Real application screenshots](IMAGENS-en-US.md).
+
+[Reading the legal documents and original licenses](DOCUMENTOS-E-LICENCAS-en-US.md).
